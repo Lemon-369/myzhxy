@@ -21,6 +21,7 @@ import java.util.List;
 
 /**
  * Swagger2配置信息
+ * http://localhost:9001/swagger-ui.html
  */
 @Configuration
 @EnableSwagger2
