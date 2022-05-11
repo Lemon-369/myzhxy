@@ -135,10 +135,11 @@ public class SystemController {
         String uuid = UUID.randomUUID().toString().replace("-", "").toLowerCase();
         String originalFilename = multipartFile.getOriginalFilename();
         int i = originalFilename.lastIndexOf(".");
+        //生成一串新的图片名称
         String newFileName =uuid.concat(originalFilename.substring(i));
 
         // 保存文件 将文件发送到第三方/独立的图片服务器上,
-        String portraitPath="C:/code/myzhxy/target/classes/public/upload/".concat(newFileName);
+        String portraitPath="D:/IdeaProjects/myzhxy/target/classes/public/upload/".concat(newFileName);
         try {
             multipartFile.transferTo(new File(portraitPath));
         } catch (IOException e) {
